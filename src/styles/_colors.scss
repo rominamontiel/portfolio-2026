@@ -38,6 +38,38 @@ $color-primary-800: #684398;
 // Error Scale
 $color-error-500: #c85555;
 
+// RGB Values
+
+$color-white-rgb: 255, 255, 255;
+$color-black-rgb: 0, 0, 0;
+
+// Grey Scale
+$color-grey-50-rgb: 248, 249, 253;
+$color-grey-100-rgb: 243, 244, 248;
+$color-grey-200-rgb: 226, 230, 238;
+$color-grey-300-rgb: 205, 210, 224;
+$color-grey-400-rgb: 150, 160, 183;
+$color-grey-500-rgb: 108, 121, 144;
+$color-grey-600-rgb: 74, 88, 112;
+$color-grey-700-rgb: 49, 58, 77;
+$color-grey-800-rgb: 33, 43, 61;
+$color-grey-900-rgb: 20, 28, 45;
+$color-grey-950-rgb: 11, 17, 29;
+
+// Primary Scale
+$color-primary-50-rgb: 248, 242, 255;
+$color-primary-100-rgb: 242, 232, 255;
+$color-primary-200-rgb: 232, 214, 255;
+$color-primary-300-rgb: 216, 187, 255;
+$color-primary-400-rgb: 200, 163, 248;
+$color-primary-500-rgb: 172, 135, 220;
+$color-primary-600-rgb: 140, 102, 191;
+$color-primary-700-rgb: 126, 88, 176;
+$color-primary-800-rgb: 104, 67, 152;
+
+// Error Scale
+$color-error-500-rgb: 200, 85, 85;
+
 // ==========================================================================
 // 2. CSS PROPERTIES
 // ==========================================================================
@@ -74,4 +106,43 @@ $color-error-500: #c85555;
 
   // Error Scale
   --color-error-500: #{$color-error-500};
+
+  // --------------- RGB Values ------------------
+
+  --color-white-rgb: #{$color-white-rgb};
+  --color-black-rgb: #{$color-black-rgb};
+
+  // Grey Scale
+  --color-grey-50-rgb: #{$color-grey-50-rgb};
+  --color-grey-100-rgb: #{$color-grey-100-rgb};
+  --color-grey-200-rgb: #{$color-grey-200-rgb};
+  --color-grey-300-rgb: #{$color-grey-300-rgb};
+  --color-grey-400-rgb: #{$color-grey-400-rgb};
+  --color-grey-500-rgb: #{$color-grey-500-rgb};
+  --color-grey-600-rgb: #{$color-grey-600-rgb};
+  --color-grey-700-rgb: #{$color-grey-700-rgb};
+  --color-grey-800-rgb: #{$color-grey-800-rgb};
+  --color-grey-900-rgb: #{$color-grey-900-rgb};
+  --color-grey-950-rgb: #{$color-grey-950-rgb};
+
+  // Primary Scale
+  --color-primary-50-rgb: #{$color-primary-50-rgb};
+  --color-primary-100-rgb: #{$color-primary-100-rgb};
+  --color-primary-200-rgb: #{$color-primary-200-rgb};
+  --color-primary-300-rgb: #{$color-primary-300-rgb};
+  --color-primary-400-rgb: #{$color-primary-400-rgb};
+  --color-primary-500-rgb: #{$color-primary-500-rgb};
+  --color-primary-600-rgb: #{$color-primary-600-rgb};
+  --color-primary-700-rgb: #{$color-primary-700-rgb};
+  --color-primary-800-rgb: #{$color-primary-800-rgb};
+
+  // Error Scale
+  --color-error-500-rgb: #{$color-error-500-rgb};
+
+  // ==========================================================================
+  // SHADOWS
+  // ==========================================================================
+
+  --shadow-1: 0 4px 16px 0 rgba(var(--color-grey-600-rgb), 0.15);
+  --shadow-2: 0 8px 7px 0 rgba(var(--color-grey-600-rgb), 0.1);
 }
