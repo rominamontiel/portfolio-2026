@@ -1,0 +1,46 @@
+@use 'index' as *;
+
+nav {
+  @include display-flex(1, 1);
+  height: var(--m-96);
+
+  &.fixed {
+    box-shadow: var(--shadow-1);
+  }
+
+  .logo {
+    img {
+      width: var(--m-24);
+    }
+  }
+
+  ul {
+    list-style: none;
+    @include display-flex(1, 1);
+    gap: var(--m-32);
+    padding: 0 0 0 var(--m-32);
+
+    li {
+      a {
+        text-decoration: none;
+        @include text(paragraph-1, medium);
+        color: var(--color-grey-400);
+        transition: 0.15s ease-in-out all;
+        display: block;
+
+        &:hover {
+          color: var(--color-grey-600);
+        }
+
+        &:active {
+          transform: scale(0.9);
+        }
+
+        &.active {
+          @include text(paragraph-1, bold);
+          color: var(--color-grey-700);
+        }
+      }
+    }
+  }
+}
