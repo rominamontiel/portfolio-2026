@@ -8,5 +8,12 @@
         "parser": "angular"
       }
     }
-  ]
+  ],
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "endOfLine": "auto"
 }
