@@ -29,7 +29,7 @@ module.exports = defineConfig([
         'error',
         {
           type: 'element',
-          prefix: 'app',
+          prefix: 'rm',
           style: 'kebab-case',
         },
       ],
