@@ -1,0 +1,14 @@
+@use 'index' as *;
+
+footer {
+  @include display-flex(1, 0);
+  justify-content: space-between;
+  height: var(--m-80);
+  max-width: 700px;
+  margin: 0 auto;
+
+  span {
+    @include text(paragraph-1, regular);
+    color: var(--color-grey-400);
+  }
+}
