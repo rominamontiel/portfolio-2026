@@ -1,0 +1,116 @@
+@use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap');
+
+:root {
+  --font-main: 'Figtree', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
+$typography: (
+  caption-1: (
+    size: 12px,
+    line-height: 16px,
+  ),
+
+  paragraph-1: (
+    size: 14px,
+    line-height: 24px,
+  ),
+
+  subheading-1: (
+    size: 16px,
+    line-height: 24px,
+  ),
+
+  heading-1: (
+    size: 20px,
+    line-height: 24px,
+  ),
+
+  heading-2: (
+    size: 24px,
+    line-height: 24px,
+  ),
+
+  heading-3: (
+    size: 36px,
+    line-height: 32px,
+  ),
+
+  display-1: (
+    size: 56px,
+    line-height: 64px,
+  ),
+
+  display-2: (
+    size: 64px,
+    line-height: 72px,
+  ),
+);
+
+// TYPOGRAPHY MIXIN
+
+@mixin text($variant, $weight: regular) {
+  $config: map.get($typography, $variant);
+
+  @if $config == null {
+    @error "Typography variant '#{$variant}' does not exist.";
+  }
+
+  font-family: var(--font-main);
+  font-size: map.get($config, size);
+  line-height: map.get($config, line-height);
+  font-weight: var(--font-weight-#{$weight});
+}
+
+/*
+EJEMPLO DE USO:
+
+------- CAPTION -------
+@include text(caption-1, regular);
+@include text(caption-1, medium);
+@include text(caption-1, semibold);
+@include text(caption-1, bold);
+
+------- PARAGRAPH -------
+@include text(paragraph-1, regular);
+@include text(paragraph-1, medium);
+@include text(paragraph-1, semibold);
+@include text(paragraph-1, bold);
+
+------- SUBHEADING -------
+@include text(subheading-1, regular);
+@include text(subheading-1, medium);
+@include text(subheading-1, semibold);
+@include text(subheading-1, bold);
+
+------- HEADING -------
+@include text(heading-1, regular);
+@include text(heading-1, medium);
+@include text(heading-1, semibold);
+@include text(heading-1, bold);
+
+@include text(heading-2, regular);
+@include text(heading-2, medium);
+@include text(heading-2, semibold);
+@include text(heading-2, bold);
+
+@include text(heading-3, regular);
+@include text(heading-3, medium);
+@include text(heading-3, semibold);
+@include text(heading-3, bold);
+
+------- DISPLAY -------
+@include text(display-1, regular);
+@include text(display-1, medium);
+@include text(display-1, semibold);
+@include text(display-1, bold);
+
+@include text(display-2, regular);
+@include text(display-2, medium);
+@include text(display-2, semibold);
+@include text(display-2, bold);
+*/

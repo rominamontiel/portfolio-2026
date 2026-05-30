@@ -1,1 +1,80 @@
-/* You can add global styles to this file, and also import other style files */
+@use './styles/typography' as *;
+@use './styles/colors';
+@use './styles/mixins' as *;
+@use './styles/measures';
+
+* {
+  @include border-box;
+}
+
+//-------------SCROLLBAR-------------
+::-webkit-scrollbar {
+  width: 8px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: var(--color-white);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: var(--color-grey-300);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-grey-400);
+}
+::-webkit-scrollbar-thumb:active {
+  background: var(--color-grey-400);
+}
+//-------------FIN SCROLLBAR-------------
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  @include user-select-none;
+  @include user-drag-none;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+p {
+  margin: var(--m-16);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  * {
+    cursor: default !important;
+  }
+}
