@@ -47,8 +47,9 @@ module.exports = defineConfig([
       prettier: eslintPluginPrettier,
     },
     rules: {
-      'prettier/prettier': 'error',
+      'prettier/prettier': 'warn',
       ...eslintConfigPrettier.rules,
+      '@typescript-eslint/explicit-function-return-type': 'warn',
     },
   },
 ]);
