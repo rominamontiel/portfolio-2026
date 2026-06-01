@@ -1,0 +1,96 @@
+:host {
+  display: block;
+}
+
+.icon {
+  min-width: var(--m-24);
+
+  //----------- SIZES ------------
+
+  &.size-32 {
+    width: var(--m-32);
+  }
+
+  &.size-40 {
+    width: var(--m-40);
+  }
+
+  //----------- COLORS ------------
+
+  &.color-white {
+    filter: invert(100%) sepia(10%) saturate(7500%) hue-rotate(178deg) brightness(109%)
+      contrast(110%);
+  }
+  &.color-black {
+    filter: none;
+  }
+  &.color-special-gradient {
+    filter: none;
+  }
+
+  &.color-grey-50 {
+    filter: none;
+  }
+  &.color-grey-100 {
+    filter: none;
+  }
+  &.color-grey-200 {
+    filter: none;
+  }
+  &.color-grey-300 {
+    filter: none;
+  }
+  &.color-grey-400 {
+    filter: none;
+  }
+  &.color-grey-500 {
+    filter: none;
+  }
+  &.color-grey-600 {
+    filter: invert(33%) sepia(56%) saturate(231%) hue-rotate(178deg) brightness(90%) contrast(92%);
+  }
+  &.color-grey-700 {
+    filter: none;
+  }
+  &.color-grey-800 {
+    filter: none;
+  }
+  &.color-grey-900 {
+    filter: none;
+  }
+  &.color-grey-950 {
+    filter: none;
+  }
+
+  &.color-primary-50 {
+    filter: none;
+  }
+  &.color-primary-100 {
+    filter: none;
+  }
+  &.color-primary-200 {
+    filter: none;
+  }
+  &.color-primary-300 {
+    filter: none;
+  }
+  &.color-primary-400 {
+    filter: none;
+  }
+  &.color-primary-500 {
+    filter: invert(68%) sepia(17%) saturate(2892%) hue-rotate(210deg) brightness(90%) contrast(91%);
+  }
+  &.color-primary-600 {
+    filter: none;
+  }
+  &.color-primary-700 {
+    filter: none;
+  }
+  &.color-primary-800 {
+    filter: none;
+  }
+
+  &.color-error-500 {
+    filter: none;
+  }
+}
