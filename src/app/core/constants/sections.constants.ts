@@ -1,4 +1,4 @@
-export enum SECTION_TITLES {
+export enum SectionTitles {
   ABOUT = 'Sobre mí',
   PROJECTS = 'Proyectos',
   EXPERIENCE = 'Experiencia',

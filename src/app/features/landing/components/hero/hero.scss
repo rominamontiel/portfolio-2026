@@ -1,0 +1,59 @@
+@use 'index' as *;
+
+.hero {
+  @include display-flex(1, 1);
+  background: var(--color-white);
+  padding: 0 var(--m-48);
+
+  &__content {
+    min-height: calc(100vh - var(--m-96) - var(--m-48));
+    width: 100%;
+    max-width: calc(1920px - var(--m-48) - var(--m-48));
+    @include display-flex(1, 1);
+    flex-direction: column;
+    gap: var(--m-32);
+    padding: 160px 0;
+    border-radius: var(--m-24);
+    background-image: url('/assets/img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+  }
+
+  &__eyebrow {
+    @include text(heading-2, regular);
+    @include animation-movement(0.8);
+  }
+
+  &__title {
+    @include text(display-2, bold);
+    text-align: center;
+    @include animation-movement(0.8);
+    animation-delay: 0.3s;
+
+    span {
+      @include text(display-1, regular);
+      display: block;
+    }
+  }
+
+  &__info {
+    @include display-flex(1, 1);
+    flex-direction: column;
+    gap: var(--m-16);
+    @include animation-movement(0.8);
+    animation-delay: 0.6s;
+
+    p {
+      color: var(--color-grey-200);
+      @include text(heading-1, regular);
+    }
+  }
+
+  &__button {
+    text-decoration: none;
+    color: var(--color-white);
+    @include animation-movement(0.8);
+    animation-delay: 0.9s;
+  }
+}
