@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { SECTION_TITLES } from '@core/constants/sections.constants';
+import { SectionTitles } from '@core/constants/sections.constants';
 import { slugify } from '@shared/utils/string.utils';
 
 @Component({
@@ -9,9 +9,9 @@ import { slugify } from '@shared/utils/string.utils';
   styleUrl: './navbar.scss',
 })
 export class Navbar {
-  activeSection = input<SECTION_TITLES | undefined>(SECTION_TITLES.EXPERIENCE);
+  public activeSection = input<SectionTitles | undefined>(SectionTitles.EXPERIENCE);
 
-  public readonly sectionList = Object.values(SECTION_TITLES);
+  public readonly sectionList = Object.values(SectionTitles);
 
   public normalizeText(text: string): string {
     return slugify(text);

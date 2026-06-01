@@ -3,14 +3,24 @@
 nav {
   @include display-flex(1, 1);
   height: var(--m-96);
+  background-color: rgba((var(--color-white-rgb)), 0.8);
+  backdrop-filter: blur(4px);
 
   &.fixed {
     box-shadow: var(--shadow-1);
   }
 
   .logo {
+    transition: 0.15s ease-in-out all;
+    @include animation-movement(0.5);
+    @include animation-child-delay;
+
     img {
       width: var(--m-24);
+    }
+
+    &:active {
+      transform: scale(0.9);
     }
   }
 
@@ -21,6 +31,9 @@ nav {
     padding: 0 0 0 var(--m-32);
 
     li {
+      @include animation-movement(0.5);
+      @include animation-child-delay;
+
       a {
         text-decoration: none;
         @include text(paragraph-1, medium);
