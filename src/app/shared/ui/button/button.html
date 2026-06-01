@@ -1,0 +1,9 @@
+<button
+  class="button"
+  [ngClass]="['size-' + config().size, config().hierarchy, config().onlyIcon ? 'only-icon' : '']"
+>
+  @if (config().text && !config().onlyIcon) {
+    {{ config().text }}
+  }
+  <rm-icon [iconName]="config().icon" [iconColor]="iconColor" [iconSize]="24"></rm-icon>
+</button>

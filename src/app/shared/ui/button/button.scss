@@ -1,0 +1,77 @@
+@use 'index' as *;
+
+.button {
+  @include text(paragraph-1, bold);
+  @include display-flex(1, 1);
+  gap: var(--m-8);
+  border-radius: var(--m-24);
+  outline: none; //TODO:⛔: revisar accesibilidad web
+  border: none;
+  min-height: var(--m-32);
+  min-width: var(--m-32);
+  padding: 0 var(--m-16);
+  cursor: pointer;
+  transition: 0.2s ease-in-out all;
+
+  rm-icon {
+    height: var(--m-24);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+
+  // --------------Only icon--------------
+
+  &.only-icon {
+    padding: 0;
+  }
+
+  // --------------Sizes--------------
+
+  &.size-40 {
+    height: var(--m-40);
+    min-width: var(--m-40);
+  }
+  &.size-48 {
+    height: var(--m-48);
+    min-width: var(--m-48);
+  }
+
+  // --------------Hierarchy--------------
+
+  &.special {
+    color: var(--color-white);
+    background: var(--color-special-gradient-animation);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transition: background-position 300ms ease;
+    &:hover {
+      background-position: 0 0;
+    }
+  }
+
+  &.primary {
+    background-color: var(--color-primary-400);
+    color: var(--color-white);
+    &:hover {
+      background-color: var(--color-primary-600);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-500);
+    &:hover {
+      background-color: var(--color-primary-300);
+    }
+  }
+
+  &.tertiary {
+    background-color: var(--color-grey-100);
+    color: var(--color-grey-600);
+    &:hover {
+      background-color: var(--color-grey-300);
+    }
+  }
+}
