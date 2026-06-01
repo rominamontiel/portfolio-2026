@@ -50,6 +50,7 @@ module.exports = defineConfig([
       'prettier/prettier': 'warn',
       ...eslintConfigPrettier.rules,
       '@typescript-eslint/explicit-function-return-type': 'warn',
+      '@typescript-eslint/explicit-member-accessibility': 'warn',
     },
   },
 ]);

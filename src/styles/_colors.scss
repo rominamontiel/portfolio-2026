@@ -10,6 +10,12 @@ $color-special-gradient: linear-gradient(
   rgba(200, 129, 215, 1) 0%,
   rgba(125, 104, 239, 1) 100%
 );
+$color-special-gradient-animation: linear-gradient(
+  90deg,
+  rgba(125, 104, 239, 1) 0%,
+  rgba(200, 129, 215, 1) 50%,
+  rgba(125, 104, 239, 1) 100%
+);
 
 // Grey Scale
 $color-grey-50: #f8f9fd;
@@ -79,6 +85,7 @@ $color-error-500-rgb: 200, 85, 85;
   --color-white: #{$color-white};
   --color-black: #{$color-black};
   --color-special-gradient: #{$color-special-gradient};
+  --color-special-gradient-animation: #{$color-special-gradient-animation};
 
   // Grey Scale
   --color-grey-50: #{$color-grey-50};
@@ -107,7 +114,9 @@ $color-error-500-rgb: 200, 85, 85;
   // Error Scale
   --color-error-500: #{$color-error-500};
 
-  // --------------- RGB Values ------------------
+  // ==========================================================================
+  // RGB Values
+  // ==========================================================================
 
   --color-white-rgb: #{$color-white-rgb};
   --color-black-rgb: #{$color-black-rgb};
