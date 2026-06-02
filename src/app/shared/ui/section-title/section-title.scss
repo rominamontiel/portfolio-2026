@@ -1,0 +1,6 @@
+@use 'index' as *;
+
+h2 {
+  @include text(heading-3, bold);
+  color: var(--color-grey-700);
+}
