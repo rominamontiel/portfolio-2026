@@ -1,0 +1,19 @@
+<section class="about" #about>
+  <rm-title-section [title]="titleSection.ABOUT"></rm-title-section>
+  <p>
+    Desarrolladora frontend con más de 5 años de experiencia enfocada en el desarrollo de interfaces
+    modernas y reactivas con Angular, implementando Signals, Standalone Components, Reactive Forms y
+    arquitecturas modulares. Dominio avanzado de RxJS para la gestión de flujos de datos complejos y
+    estados con NgRx/Component Store.
+  </p>
+  <p>
+    Comprometida con la excelencia técnica a través de la implementación de tests unitarios
+    (Jasmine/Karma) y la aplicación de buenas prácticas de desarrollo basadas en principios SOLID y
+    Clean Code para garantizar mantenibilidad a largo plazo.
+  </p>
+  <div class="about__tags">
+    @for (item of tagList; track item) {
+      <rm-tag [tagName]="item" [hierarchy]="tagsHiearchy.SECONDARY"></rm-tag>
+    }
+  </div>
+</section>
