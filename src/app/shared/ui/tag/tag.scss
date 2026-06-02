@@ -1,0 +1,30 @@
+@use 'index' as *;
+
+.tag {
+  padding: 0 var(--m-16);
+  height: var(--m-32);
+  border-radius: var(--m-32);
+  display: block;
+  @include text(caption-1, semibold);
+  line-height: var(--m-32);
+
+  &.special {
+    color: var(--color-white);
+    background: var(--color-special-gradient);
+  }
+
+  &.primary {
+    background-color: var(--color-primary-400);
+    color: var(--color-white);
+  }
+
+  &.secondary {
+    background-color: var(--color-primary-100);
+    color: var(--color-primary-500);
+  }
+
+  &.tertiary {
+    background-color: var(--color-grey-100);
+    color: var(--color-grey-600);
+  }
+}
