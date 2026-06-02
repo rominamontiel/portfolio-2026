@@ -4,6 +4,7 @@
   @include display-flex(1, 1);
   background: var(--color-white);
   padding: 0 var(--m-48);
+  @include animation-opacity(0.5);
 
   &__content {
     min-height: calc(100vh - var(--m-96) - var(--m-48));
@@ -23,13 +24,14 @@
   &__eyebrow {
     @include text(heading-2, regular);
     @include animation-movement(0.8);
+    animation-delay: 0.3s;
   }
 
   &__title {
     @include text(display-2, bold);
     text-align: center;
     @include animation-movement(0.8);
-    animation-delay: 0.3s;
+    animation-delay: 0.6s;
 
     span {
       @include text(display-1, regular);
@@ -42,7 +44,7 @@
     flex-direction: column;
     gap: var(--m-16);
     @include animation-movement(0.8);
-    animation-delay: 0.6s;
+    animation-delay: 0.9s;
 
     p {
       color: var(--color-grey-200);
@@ -54,6 +56,6 @@
     text-decoration: none;
     color: var(--color-white);
     @include animation-movement(0.8);
-    animation-delay: 0.9s;
+    animation-delay: 1.2s;
   }
 }

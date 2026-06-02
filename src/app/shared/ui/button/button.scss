@@ -45,7 +45,6 @@
     background: var(--color-special-gradient-animation);
     background-size: 200% 100%;
     background-position: 100% 0;
-    transition: background-position 300ms ease;
     &:hover {
       background-position: 0 0;
     }
