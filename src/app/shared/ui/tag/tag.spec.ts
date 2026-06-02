@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Tag } from './tag';
+import { HiearchyUi } from '@core/constants/hiearchy-ui.constant';
 
 describe('Tag', () => {
   let component: Tag;
@@ -12,6 +13,8 @@ describe('Tag', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(Tag);
+    fixture.componentRef.setInput('tagName', 'Tag');
+    fixture.componentRef.setInput('hierarchy', HiearchyUi.PRIMARY);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

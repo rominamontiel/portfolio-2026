@@ -40,6 +40,7 @@ nav {
         color: var(--color-grey-400);
         transition: 0.15s ease-in-out all;
         display: block;
+        cursor: pointer;
 
         &:hover {
           color: var(--color-grey-600);

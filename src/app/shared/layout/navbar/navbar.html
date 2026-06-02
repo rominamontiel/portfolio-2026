@@ -5,7 +5,9 @@
   <ul>
     @for (item of sectionList; track item) {
       <li>
-        <a href="#{{ item }}" [class.active]="activeSection() === item">{{ item }}</a>
+        <a [class.active]="activeSection() === item" (click)="handleScroll(item)">
+          {{ item }}
+        </a>
       </li>
     }
   </ul>

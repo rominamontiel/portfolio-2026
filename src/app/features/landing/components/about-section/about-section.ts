@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HiearchyUi } from '@core/constants/hiearchy-ui.constant';
-import { SectionTitles } from '@core/constants/sections.constants';
+import { SectionTitles, SectionTitlesId } from '@core/constants/sections.constants';
 import { SectionTitle } from '@shared/ui/section-title/section-title';
 import { Tag } from '@shared/ui/tag/tag';
 
@@ -12,6 +12,7 @@ import { Tag } from '@shared/ui/tag/tag';
 })
 export class AboutSection {
   public titleSection = SectionTitles;
+  public titleSectionId = SectionTitlesId;
   public tagList = [
     'Typescript',
     'RxJs',

@@ -12,6 +12,7 @@ describe('TitleSection', () => {
     }).compileComponents();
 
     fixture = TestBed.createComponent(SectionTitle);
+    fixture.componentRef.setInput('title', 'Title');
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

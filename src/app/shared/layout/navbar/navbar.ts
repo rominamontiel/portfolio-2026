@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
 import { SectionTitles } from '@core/constants/sections.constants';
+import { scrollToSection } from '@shared/utils/scroll-to-id.utils';
 import { slugify } from '@shared/utils/string.utils';
 
 @Component({
@@ -15,5 +16,9 @@ export class Navbar {
 
   public normalizeText(text: string): string {
     return slugify(text);
+  }
+
+  public handleScroll(id: SectionTitles): void {
+    scrollToSection(id);
   }
 }
